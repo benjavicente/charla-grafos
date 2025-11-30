@@ -8,6 +8,7 @@ const getNavDataCached = cache(getNavData);
 const getUserDataCached = cache(getUserData);
 
 async function Navbar() {
+  "use cache";
   const data = await getNavDataCached();
 
   return (
@@ -45,6 +46,7 @@ async function UserInfo() {
 }
 
 async function App() {
+  "use cache";
   const user = await getUserDataCached();
 
   return (

@@ -34,6 +34,8 @@ interface PageProps {
 }
 
 export default async function DemoPage({ params }: PageProps) {
+  "use cache";
+
   const { slug } = await params;
   const appConfig = APP_CONFIG[slug as AppSlug];
   if (!appConfig) notFound();
