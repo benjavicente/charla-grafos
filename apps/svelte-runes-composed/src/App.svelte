@@ -3,33 +3,36 @@
   import { useCounter } from "./composables/useCounter.svelte";
   import { useTimer } from "./composables/useTimer.svelte";
 
-  const { mouseX, mouseY } = useMouse();
-  const { counter, increment, decrement } = useCounter();
-  const { secondsSinceRender } = useTimer();
+  const mouse = useMouse();
+  const counter = useCounter();
+  const timer = useTimer();
 </script>
 
 <div class="app">
   <h1>Svelte Runes</h1>
   <div class="section">
     <h2>Mouse Position</h2>
-    <p>X: {mouseX}, Y: {mouseY}</p>
+    <p>X: {mouse.mouseX}, Y: {mouse.mouseY}</p>
   </div>
   <div class="section">
     <h2>Seconds Since Render</h2>
-    <p>{secondsSinceRender} seconds</p>
+    <p>{timer.secondsSinceRender} seconds</p>
   </div>
   <div class="section">
     <h2>Counter</h2>
-    <p>Count: {counter}</p>
-    <button onclick={increment}>+</button>
-    <button onclick={decrement}>-</button>
+    <p>Count: {counter.counter}</p>
+    <button onclick={counter.increment}>+</button>
+    <button onclick={counter.decrement}>-</button>
   </div>
 </div>
 
 <style>
   .app {
     padding: 2rem;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   .section {
@@ -50,4 +53,3 @@
     cursor: pointer;
   }
 </style>
-

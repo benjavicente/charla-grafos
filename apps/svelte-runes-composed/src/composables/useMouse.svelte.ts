@@ -15,6 +15,12 @@ export function useMouse() {
     };
   });
 
-  return { mouseX, mouseY };
+  return {
+    get mouseX() {
+      return mouseX;
+    },
+    get mouseY() {
+      return mouseY;
+    },
+  };
 }
-

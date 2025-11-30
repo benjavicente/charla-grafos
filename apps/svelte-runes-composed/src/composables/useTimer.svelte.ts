@@ -12,6 +12,8 @@ export function useTimer() {
     };
   });
 
-  return { secondsSinceRender };
+  return { 
+    get secondsSinceRender() { return secondsSinceRender; }
+  };
 }
 

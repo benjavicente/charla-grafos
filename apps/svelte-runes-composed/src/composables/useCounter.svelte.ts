@@ -9,6 +9,10 @@ export function useCounter() {
     counter--;
   }
 
-  return { counter, increment, decrement };
+  return { 
+    get counter() { return counter; },
+    increment, 
+    decrement 
+  };
 }
 
