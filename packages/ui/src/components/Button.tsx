@@ -15,4 +15,3 @@ export function Button({ children, className = "", ...props }: ButtonProps) {
     </button>
   );
 }
-

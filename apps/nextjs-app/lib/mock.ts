@@ -14,6 +14,7 @@ export async function getNavData() {
       { href: "/demo", label: "Demos" },
       { href: "/app-router", label: "App Router" },
       { href: "/pages-router", label: "Pages Router" },
+      { href: "/ui", label: "UI" },
     ],
     timestamp: Date.now(),
   };

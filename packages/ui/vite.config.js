@@ -16,7 +16,9 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: (id) => {
+        return id === "react" || id === "react-dom" || id.startsWith("react/");
+      },
       output: {
         globals: {
           react: "React",
