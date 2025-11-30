@@ -1,4 +1,4 @@
-export async function mockFetch(delay = 2000): Promise<{
+export async function mockFetch(delay = 1500): Promise<{
   data: string;
   timestamp: number;
 }> {
@@ -7,11 +7,12 @@ export async function mockFetch(delay = 2000): Promise<{
 }
 
 export async function getNavData() {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 300));
   return {
     links: [
       { href: "/", label: "Home" },
       { href: "/demo", label: "Demos" },
+      { href: "/app-router", label: "App Router" },
       { href: "/pages-router", label: "Pages Router" },
     ],
     timestamp: Date.now(),
@@ -19,7 +20,7 @@ export async function getNavData() {
 }
 
 export async function getUserData() {
-  await new Promise((resolve) => setTimeout(resolve, 1500));
+  await new Promise((resolve) => setTimeout(resolve, 750));
   return {
     name: "John Doe",
     email: "john@example.com",
@@ -27,4 +28,3 @@ export async function getUserData() {
     timestamp: Date.now(),
   };
 }
-

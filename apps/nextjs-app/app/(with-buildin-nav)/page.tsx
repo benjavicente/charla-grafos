@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { mockFetch } from "../lib/mock";
+import { mockFetch } from "../../lib/mock";
 
 export default function Home() {
   return (

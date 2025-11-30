@@ -1,34 +1,34 @@
 <script>
-  let mouseX = $state(0)
-  let mouseY = $state(0)
-  let secondsSinceRender = $state(0)
-  let counter = $state(0)
-  const renderTime = Date.now()
+  let mouseX = $state(0);
+  let mouseY = $state(0);
+  let secondsSinceRender = $state(0);
+  let counter = $state(0);
+  const renderTime = Date.now();
 
   $effect(() => {
     function handleMouseMove(event) {
-      mouseX = event.clientX
-      mouseY = event.clientY
+      mouseX = event.clientX;
+      mouseY = event.clientY;
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
-    
+    window.addEventListener("mousemove", handleMouseMove);
+
     const intervalId = setInterval(() => {
-      secondsSinceRender = Math.floor((Date.now() - renderTime) / 1000)
-    }, 1000)
+      secondsSinceRender = Math.floor((Date.now() - renderTime) / 1000);
+    }, 1000);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      clearInterval(intervalId)
-    }
-  })
+      window.removeEventListener("mousemove", handleMouseMove);
+      clearInterval(intervalId);
+    };
+  });
 
   function increment() {
-    counter++
+    counter++;
   }
 
   function decrement() {
-    counter--
+    counter--;
   }
 </script>
 
@@ -53,7 +53,10 @@
 <style>
   .app {
     padding: 2rem;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   .section {
@@ -74,4 +77,3 @@
     cursor: pointer;
   }
 </style>
-

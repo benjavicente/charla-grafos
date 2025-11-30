@@ -1,0 +1,25 @@
+{
+  "name": "angular-inject",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 7100 --strictPort"
+  },
+  "dependencies": {
+    "@angular/common": "catalog:",
+    "@angular/compiler": "catalog:",
+    "@angular/core": "catalog:",
+    "@angular/platform-browser": "catalog:",
+    "@angular/platform-browser-dynamic": "catalog:",
+    "rxjs": "catalog:"
+  },
+  "devDependencies": {
+    "@analogjs/vite-plugin-angular": "catalog:",
+    "@angular/build": "catalog:",
+    "@angular/compiler-cli": "catalog:",
+    "vite": "catalog:"
+  }
+}
+
